@@ -1,0 +1,64 @@
+body{
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+
+  h1, h2, h3{
+    font-family: "Montserrat-Bold";
+}
+
+.colored-section{
+    background-color: #ec4646;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.colored2-section{
+    background-color: ef4f4f;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+/*  Headings */
+
+.heading{
+    padding: 3rem;
+}
+
+.heading-title{
+    font-family: "Montserrat-Black";
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.heading-image{
+    height: 15rem;
+    width: auto;
+}
+
+
+
+/* pengurus harian */
+
+.foto-ketua{
+    height: 30vw;
+}
+
+.foto-ph{
+    height: 20rem;
+}
+
+
+/* divisi */
+
+.nama-divisi{
+    background-color: #fff;
+    color: black;
+}
+
+.deskripsi-divisi{
+    color: #fff;
+}
+

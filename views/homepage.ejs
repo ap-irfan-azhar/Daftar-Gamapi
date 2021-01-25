@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <title>Daftar Gamapi</title>
+</head>
+<body>
+
+    <div class="colored-section">
+
+        <div class="row heading">
+            <div class="col-md-6 my-auto">
+                <img class="heading-image" src="images/logo-gamapi.png" alt="">
+            </div>
+
+            <div class="col-md-6 my-auto">
+                <h1 class="heading-title text"> Ayo bergabung bersama Gamapi 2021</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ut nibh vitae interdum. Curabitur gravida facilisis quam, a hendrerit purus viverra quis. Cras suscipit sodales elit, ac ullamcorper lectus ultrices et</p>
+                <a type="button" class="btn btn-primary" href="/">Daftar Sekarang</a>
+                <a type="button" class="btn btn-secondary" href="/#divisi">Pilihan Divisi</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="heading">
+        <div class="kabinet row">
+            <div class="col-md-6 my-auto">
+                <h1 class="section-heading">Kabinet Niskala Sembrani</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ut nibh vitae interdum. Curabitur gravida facilisis quam, a hendrerit purus viverra quis. Cras suscipit sodales elit, ac ullamcorper lectus ultrices et</p>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <h2>visi</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ut nibh vitae interdum.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Misi</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item">Lorem ipsum dolor sit amet,</li>
+                            <li class="list-group-item">Lorem ipsum dolor sit amet,</li>
+                        </ul>
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="col-md-6 my-auto">
+                <img src="images/logo-kabinet.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="pegurus-harian colored-section">
+        <h1 class="display-2">Pengurus Harian</h1>
+
+        <div class="row my-5">
+            <div class="col-md-6 my-5">
+                <div class="row">
+                    <div class="col-6 my-auto">
+                        <h2 class="display-4">Fery Dwi Setiawan</h3>
+                        <h4>Ketua Gamapi 2021</h4>
+                    </div>
+                    <div class="col-6">
+                        <img class="foto-ketua" src="images/foto/fery.png" alt="foto-ketua">
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="col-md-6 my-5">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="foto-ketua" src="images/foto/fery.png" alt="foto-ketua">
+                    </div>
+                    <div class="col-6 my-auto float-start">
+                        <h2 class="display-4">Sasa</h3>
+                        <h4>Wakil Ketua Gamapi 2021</h4>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="colored2-section">
+            <div class="row my-5 justify-content-center">
+                <% for(let i=0; i<ph.length; i++){ %> 
+                <div class="col-md-4 col-6">
+                    <img class="foto-ph" src="images/foto/<%= ph[i].foto %>" alt="fotoPH">
+                    <h3 class="display-5"><%= ph[i].nama %></h3>
+                    <h5><%= ph[i].jabatan %></h5>
+                </div>
+                <% } %>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="divisi">
+        <h1>Pilihan Divisi</h1>
+
+        <div class="album">
+            <div class="row my-3 justify-content-center">
+                <% for(let i=0; i<divisi.length; i++){ %>
+                    <div class="container-md col-md-3 col-sm-6 col-8 p-3 m-2 bg-dark border border-primary border-1 rounded">
+                        <h3 class="nama-divisi"> <%= divisi[i].nama %> </h3>
+                        <p class="deskripsi-divisi"> <%= divisi[i].deskripsi %> </p>
+                        <a type="button" href="<%= divisi[i].link%>" class="btn btn-outline-info">kenalan lebih lanjut yuk</a>
+                    </div>
+                <% } %> 
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
