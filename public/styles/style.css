@@ -15,6 +15,12 @@ body{
     overflow-x: hidden;
 }
 
+.white-section{
+    background-color: #fff;
+    color: black;
+    overflow-x: hidden;
+}
+
 
 
 
@@ -26,12 +32,12 @@ body{
 
 .heading-title{
     font-family: "Montserrat-Black";
-    font-size: 3.5rem;
+    font-size: 5vw;
     line-height: 1.5;
 }
 
 .heading-image{
-    height: 15rem;
+    height: 30vw;
     width: auto;
 }
 
@@ -40,12 +46,12 @@ body{
 /* pengurus harian */
 
 .foto-ketua{
-    height: 20rem;
+    height: 30vw;
     border-radius: 100%;
 }
 
 .foto-ph{
-    height: 15rem;
+    height: 25vw;
     border-radius: 100%;
 }
 
