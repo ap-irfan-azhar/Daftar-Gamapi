@@ -1,12 +1,12 @@
 body{
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
 
 
   h1, h2, h3{
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-Bold", 'sans-serif-Bold';
 }
 
 .colored-section{
@@ -31,7 +31,7 @@ body{
 }
 
 .heading-title{
-    font-family: "Montserrat-Black";
+    font-family: "Montserrat-Black", "sans-serif-Black";
     line-height: 1.5;
 }
 
