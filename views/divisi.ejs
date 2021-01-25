@@ -1,0 +1,77 @@
+<%- include("partials/header.ejs"); %>
+<body>
+
+    <div class="colored-section">
+        <h1 class="m-3 mb-5 heading-title"><%= divisi.nama %> </h1>
+        <h4 class="mb-5"><%= divisi.deskripsi %> </h4>
+
+        <div class="row mx-5 pb-5 justify-content-center my-5">
+            <div class="col-md-4 col-8">
+                <h3>Jika Bergabung dengan <%= divisi.namaAbb %> kamu dapat:</h3>
+                <ul class="list-group"></ul>
+                <% for(let i=0; i<divisi.benefit.length; i++){ %> 
+                    <li class="list-group-item bg-primary text-dark d-inline-flex mx-1 my-2 rounded"> <%= divisi.benefit[i] %></li>
+                 <% } %>   
+            </div>            
+            <div class="col-md-4 col-8">
+                <h3>Divisi <%= divisi.namaAbb %> cocok untuk kamu yang:</h3>
+                <ul class="list-group"></ul>
+                <% for(let i=0; i<divisi.cocok.length; i++){ %> 
+                    <li class="list-group-item bg-dark text-white d-inline-flex mx-1 my-2 rounded"> <%= divisi.cocok[i] %></li>
+                <% } %>
+                    
+            </div>            
+        </div>
+    </div>
+
+    <div class="proker py-5">
+        <h1 class="m-5">Program Kerja</h1>
+
+        <div class="album">
+            <div class="row my-3 justify-content-center">
+                <% for(let i=0; i<divisi.proker.length; i++){ %>
+                    <div class=" container-md col-md-3 col-sm-6 col-8 p-3 m-2 bg-primary border border-dark border-1 rounded">
+                        <h3 class="bg-light d-inline-flex px-2 rounded"> <%= divisi.proker[i].nama %> </h3>
+                        <p> <%= divisi.proker[i].deskripsi %></p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="colored-section py-5">
+        <h1 class="mb-5">Pengurus Divisi</h1>
+        <div class="row m-3">
+            <div class="col-md-5 col-6 my-auto">
+                <img class="foto-ketua" src="<%= divisi.ketua.foto %>" alt="foto kadiv">
+            </div>
+            <div class="col-md-5 col-6 my-auto">
+                <h2 class="display-4"> <%= divisi.ketua.nama %> </h2>
+                <h4> <%= divisi.ketua.jabatan %> </h4>
+            </div>
+        </div>
+
+        <div class="row my-5 justify-content-center">
+            <% for(let i=0; i<divisi.subkoor.length; i++){ %> 
+                <div class="col-md-4 col-6 my-3">
+                    <img class="foto-ph" src="<%= divisi.subkoor[i].foto %>" alt="foto subkoor">
+                    <h3 class="display-5"><%= divisi.subkoor[i].nama %></h3>
+                    <h5> <%= divisi.subkoor[i].jabatan %></h5>
+                </div>
+            <% } %>
+                
+
+        </div>
+        
+        <div class="p-3">
+            <span>
+                <a type="button" class="btn btn-dark mx-2" href="/">Beranda</a>
+                <a type="button" class="btn btn-primary mx-2" href="/#divisi">Daftar Divisi</a>
+                <a type="button" class="btn btn-success mx-2" href="/pendaftaran">Daftar Sekarang</a>
+            </span>
+        </div>
+        
+    </div>
+    
+    <%- include("partials/footer.ejs"); %>
