@@ -52,7 +52,7 @@ app.get("/divisi/:id", function(req, res){
         }
     }
 
-    mit = new Divisi(
+    let mit = new Divisi(
         "Divisi Multimedia dan IT",
         "MIT",
         new Pengurus("Kinanthi", "Ketua DIvisi MIT", "kinan.png"),

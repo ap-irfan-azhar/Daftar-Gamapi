@@ -38,6 +38,8 @@ body{
 .heading-image{
     height: 30vw;
     width: auto;
+    min-width: 250px;
+    min-height: 250px;
 }
 
 
@@ -47,11 +49,15 @@ body{
 .foto-ketua{
     height: 30vw;
     border-radius: 100%;
+    min-width: 270px;
+    min-height: 270px;
 }
 
 .foto-ph{
     height: 25vw;
     border-radius: 100%;
+    min-width: 200px;
+    min-height: 200px;
 }
 
 
