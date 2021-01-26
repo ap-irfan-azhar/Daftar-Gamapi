@@ -6,7 +6,7 @@ body{
 
 
   h1, h2, h3{
-    font-family: "Montserrat-Bold", 'serif-Bold';
+    font-family: "Montserrat-Bold", "Lora", 'serif-Bold';
 }
 
 .colored-section{
@@ -31,7 +31,8 @@ body{
 }
 
 .heading-title{
-    font-family: "Montserrat-Black", "serif-Black";
+    font-family: "Montserrat-Black", "Lora-Bold", "serif-Black", "sans-serif-Black";
+    font-weight: bold;
     line-height: 1.5;
 }
 
@@ -49,15 +50,15 @@ body{
 .foto-ketua{
     height: 30vw;
     border-radius: 100%;
-    min-width: 250px;
-    min-height: 250px;
+    min-width: 220px;
+    min-height: 220px;
 }
 
 .foto-ph{
     height: 25vw;
     border-radius: 100%;
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 190px;
+    min-height: 190px;
 }
 
 
