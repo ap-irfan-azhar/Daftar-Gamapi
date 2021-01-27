@@ -1,16 +1,16 @@
 body{
-    font-family: 'Montserrat', 'sans-serif';
+    font-family: 'Poppins', 'Montserrat', 'sans-serif';
     text-align: center;
 }
 
 
 
-  h1, h2, h3{
-    font-family: "Montserrat-Bold", "Lora", 'serif-Bold';
+  h1, h2, h3 {
+    font-family: "Fraunces", "Montserrat-Bold", "Lora", 'serif-Bold';
 }
 
 .colored-section{
-    background-color: #ec4646;
+    background-color: #971d2a;
     color: #fff;
     overflow-x: hidden;
 }
@@ -31,7 +31,7 @@ body{
 }
 
 .heading-title{
-    font-family: "Montserrat-Black", "Lora-Bold", "serif-Black", "sans-serif-Black";
+    font-family: "Fraunces" "Montserrat-Black", "Lora-Bold", "serif-Black", "sans-serif-Black";
     font-weight: bold;
     line-height: 1.5;
 }

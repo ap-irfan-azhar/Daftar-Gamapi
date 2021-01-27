@@ -12,7 +12,7 @@ app.get("/", function(req, res){
         {nama: "Zulfa Annisa", jabatan: "Bendahara 1", foto:"zulfa.png"},
         {nama: "Anugrah Sasi Raya", jabatan: "Bendahara2", foto:"sasi.png"},
         {nama: "Monica Nanda Bakti Nusa", jabatan: "Sekretaris1", foto:"monic.png"},
-        {nama: "Nuzul Hanifah", jabatan: "Sekretaris2", foto:"hani.png"},
+        {nama: "Nuzul Nur Hanifah", jabatan: "Sekretaris2", foto:"hani.png"},
     ]
 
     let divisi = [

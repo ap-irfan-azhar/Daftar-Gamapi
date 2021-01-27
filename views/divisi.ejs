@@ -36,8 +36,8 @@
         <div class="album">
             <div class="row my-3 justify-content-center">
                 <% for(let i=0; i<divisi.proker.length; i++){ %>
-                    <div class=" container-md col-md-3 col-sm-6 col-10 p-3 m-2 bg-primary border border-dark border-1 rounded">
-                        <h3 class="bg-light d-inline-flex px-2 rounded"> <%= divisi.proker[i].nama %> </h3>
+                    <div class=" container-md col-md-3 col-sm-6 col-10 p-3 m-2 bg-light border border-dark border-1 rounded">
+                        <h3 class="bg-dark text-white d-inline-flex px-2 rounded"> <%= divisi.proker[i].nama %> </h3>
                         <p class="mb-5"> <%= divisi.proker[i].deskripsi %></p>
                     </div>
                 <% } %>
@@ -53,7 +53,7 @@
                 <img class="foto-ketua" src="<%= divisi.ketua.foto %>" alt="foto kadiv">
             </div>
             <div class="col-md-3 col-5 my-auto">
-                <h2 class="display-6"> <%= divisi.ketua.nama %> </h2>
+                <h2> <%= divisi.ketua.nama %> </h2>
                 <h4 class="mb-5"> <%= divisi.ketua.jabatan %> </h4>
             </div>
         </div>
