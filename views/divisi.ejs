@@ -16,14 +16,14 @@
                 <h3>Jika Bergabung dengan <%= divisi.namaAbb %> kamu dapat:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.benefit.length; i++){ %> 
-                    <li class="list-group-item bg-primary text-dark d-inline-flex mx-1 my-2 rounded border border-1 border-dark"> <%= divisi.benefit[i] %></li>
+                    <li class="list-group-item bg-dark text-white d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.benefit[i] %></li>
                  <% } %>   
             </div>            
             <div class="col-md-6 col-9">
                 <h3>Divisi <%= divisi.namaAbb %> cocok untuk kamu yang:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.cocok.length; i++){ %> 
-                    <li class="list-group-item bg-dark text-white d-inline-flex mx-1 my-2 rounded border border-1 border-primary"> <%= divisi.cocok[i] %></li>
+                    <li class="list-group-item bg-dark text-white d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.cocok[i] %></li>
                 <% } %>
                     
             </div>            
