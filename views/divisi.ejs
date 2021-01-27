@@ -2,18 +2,24 @@
 <body>
 
     <div class="colored-section">
-        <h1 class="m-3 mb-5 heading-title display-4"><%= divisi.nama %> </h1>
-        <h4 class="mb-5"><%= divisi.deskripsi %> </h4>
-
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-3 my-auto">
+                <img class="logo-divisi" src="<%= divisi.logo %>" alt="logo divisi">
+            </div>
+            <div class="col-md-7">
+                <h1 class="m-3 mb-5 heading-title display-4"><%= divisi.nama %> </h1>
+                <h4 class="mb-5"><%= divisi.deskripsi %> </h4>
+            </div>
+        </div>
         <div class="row mx-5 pb-5 justify-content-center my-5">
-            <div class="col-md-4 col-8">
+            <div class="col-md-6 col-9">
                 <h3>Jika Bergabung dengan <%= divisi.namaAbb %> kamu dapat:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.benefit.length; i++){ %> 
                     <li class="list-group-item bg-primary text-dark d-inline-flex mx-1 my-2 rounded border border-1 border-dark"> <%= divisi.benefit[i] %></li>
                  <% } %>   
             </div>            
-            <div class="col-md-4 col-8">
+            <div class="col-md-6 col-9">
                 <h3>Divisi <%= divisi.namaAbb %> cocok untuk kamu yang:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.cocok.length; i++){ %> 
@@ -24,13 +30,13 @@
         </div>
     </div>
 
-    <div class="proker py-5 white-section mb-5">
+    <div class="proker pb-5 pt-3 white-section mb-5">
         <h1 class="m-5">Program Kerja</h1>
 
         <div class="album">
             <div class="row my-3 justify-content-center">
                 <% for(let i=0; i<divisi.proker.length; i++){ %>
-                    <div class=" container-md col-md-3 col-sm-6 col-8 p-3 m-2 bg-primary border border-dark border-1 rounded">
+                    <div class=" container-md col-md-3 col-sm-6 col-10 p-3 m-2 bg-primary border border-dark border-1 rounded">
                         <h3 class="bg-light d-inline-flex px-2 rounded"> <%= divisi.proker[i].nama %> </h3>
                         <p class="mb-5"> <%= divisi.proker[i].deskripsi %></p>
                     </div>
@@ -47,7 +53,7 @@
                 <img class="foto-ketua" src="<%= divisi.ketua.foto %>" alt="foto kadiv">
             </div>
             <div class="col-md-3 col-5 my-auto">
-                <h2 class="display-4"> <%= divisi.ketua.nama %> </h2>
+                <h2 class="display-6"> <%= divisi.ketua.nama %> </h2>
                 <h4 class="mb-5"> <%= divisi.ketua.jabatan %> </h4>
             </div>
         </div>
@@ -56,7 +62,7 @@
             <% for(let i=0; i<divisi.subkoor.length; i++){ %> 
                 <div class="col-md-4 col-6 my-3">
                     <img class="foto-ph" src="<%= divisi.subkoor[i].foto %>" alt="foto subkoor">
-                    <h3 class="display-5"><%= divisi.subkoor[i].nama %></h3>
+                    <h3 ><%= divisi.subkoor[i].nama %></h3>
                     <h5> <%= divisi.subkoor[i].jabatan %></h5>
                 </div>
             <% } %>

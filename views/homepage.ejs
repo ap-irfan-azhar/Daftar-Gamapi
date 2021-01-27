@@ -12,7 +12,7 @@
 
             <div class="col-md-6 my-auto">
                 <h1 class="heading-title display-4"> Ayo bergabung bersama Gamapi 2021</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ut nibh vitae interdum. Curabitur gravida facilisis quam, a hendrerit purus viverra quis. Cras suscipit sodales elit, ac ullamcorper lectus ultrices et</p>
+                <p>"Bersama, Bergerak, Berdampak"</p>
                 <a type="button" class="btn btn-primary m-3" href="/pendaftaran">Daftar Sekarang</a>
                 <a type="button" class="btn btn-secondary m-3" href="/#divisi">Pilihan Divisi</a>
             </div>
@@ -28,17 +28,24 @@
 
             <div class="col-md-6 my-auto order-md-first">
                 <h1 class="section-heading">Kabinet Niskala Sembrani</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ut nibh vitae interdum. Curabitur gravida facilisis quam, a hendrerit purus viverra quis. Cras suscipit sodales elit, ac ullamcorper lectus ultrices et</p>
-                <div class="row mt-5 mb-3">
-                    <div class="col-md-6">
+                <p>Dalam bahasa Sansekerta,
+                    Niskala memiliki arti tidak ada halangan atau selamat. Sembrani memiliki arti berani
+                    </p>
+                
+                <p>Niskala Sembrani merupakan bentuk pengharapan bagi Gamapi. Kendati hanya berada di lingkup departemen dan ditengah ketidakpastian situasi pandemi Covid-19, Gamapi dapat memberikan kebermanfaatan serta mampu mengarungi periode kepengurusan tahun ini dengan penuh keberanian dan tanpa halangan yang berarti.</p>
+                <div class="mt-5 mb-3">
+                    <div>
                         <h2>Visi</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor ut nibh vitae interdum.</p>
+                        <p>Mewujudkan Gamapi sebagai wadah berkembang dan berkolaborasi mahasiswa MKP dengan menghadirkan profesionalitas, efektivitas, adaptabilitas, dan memahami posisi serta meningkatkan peran Gamapi sebagai himpunan mahasiswa departemen.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div>
                         <h2>Misi</h2>
                         <ul class="list-group">
-                            <li class="list-group-item">Lorem ipsum dolor sit amet,</li>
-                            <li class="list-group-item">Lorem ipsum dolor sit amet,</li>
+                            <li class="list-group-item"> Menghadirkan profesionalitas dimanifestasikan dalam penggunaan merit system.</li>
+                            <li class="list-group-item">Meningkatkan efektivitas organisasi melalui re-strukturisasi kepengurusan, perincian tupoksi pengurus, pemetaan, dan pengoptimalan potensi SDM mahasiswa MKP.</li>
+                            <li class="list-group-item">Memunculkan ruang-ruang partisipasi alternatif bagi anggota GAMAPI.</li>
+                            <li class="list-group-item">Adaptif terhadap dampak Covid-19 dengan mitigasi program kerja serta melakukan pengawalan isu nasional atau daerah secara fokus dan berkala.</li>
+                            <li class="list-group-item">Meningkatkan semangat kolaboratif antar  divisi, lembaga, NGO, atau stake holders lain. li>
                         </ul>
                     </div>
                         
@@ -67,10 +74,10 @@
             <div class="col-md-6 my-5">
                 <div class="row">
                     <div class="col-6">
-                        <img class="foto-ketua" src="images/foto/fery.png" alt="foto-ketua">
+                        <img class="foto-ketua" src="images/foto/sasa.png" alt="foto-wakil-ketua">
                     </div>
                     <div class="col-6 my-auto float-start">
-                        <h2 class="display-4">Sasa</h3>
+                        <h2 class="display-4">Annisa Rahmania Jernih</h3>
                         <h4>Wakil Ketua Gamapi 2021</h4>
                     </div>
                     
@@ -83,8 +90,8 @@
             <div class="row my-5 justify-content-center">
                 <% for(let i=0; i<ph.length; i++){ %> 
                 <div class="col-md-4 col-6 my-3">
-                    <img class="foto-ph" src="images/foto/<%= ph[i].foto %>" alt="fotoPH">
-                    <h3 class="display-5"><%= ph[i].nama %></h3>
+                    <img class="foto-ph" src="images/foto/<%= ph[i].foto %>" alt="foto-PH">
+                    <h3 class="display-6"><%= ph[i].nama %></h3>
                     <h5><%= ph[i].jabatan %></h5>
                 </div>
                 <% } %>
