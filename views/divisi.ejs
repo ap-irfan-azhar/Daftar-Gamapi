@@ -2,24 +2,24 @@
 <body>
 
     <div class="colored-section">
-        <div class="row justify-content-center pb-5">
-            <div class="col-md-3 my-auto">
+        <div class="row justify-content-center pb-3">
+            <div class="col-lg-3 col-md-4 my-auto">
                 <img class="logo-divisi" src="<%= divisi.logo %>" alt="logo divisi">
             </div>
-            <div class="col-md-7">
+            <div class="col-lg-6 col-md-7">
                 <h1 class="m-3 mb-5 heading-title display-4"><%= divisi.nama %> </h1>
                 <h4 class="mb-5"><%= divisi.deskripsi %> </h4>
             </div>
         </div>
-        <div class="row mx-5 pb-5 justify-content-center my-5">
-            <div class="col-md-6 col-9">
+        <div class="row mx-5 pb-5 justify-content-center my-3">
+            <div class="col-md-6 col-11 pb-3">
                 <h3>Jika Bergabung dengan <%= divisi.namaAbb %> kamu dapat:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.benefit.length; i++){ %> 
                     <li class="list-group-item bg-dark text-white d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.benefit[i] %></li>
                  <% } %>   
             </div>            
-            <div class="col-md-6 col-9">
+            <div class="col-md-6 col-11">
                 <h3>Divisi <%= divisi.namaAbb %> cocok untuk kamu yang:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.cocok.length; i++){ %> 
@@ -49,10 +49,10 @@
     <div class="colored-section py-5">
         <h1 class="mb-5 display-4">Pengurus Divisi</h1>
         <div class="row mx-auto my-3 justify-content-center">
-            <div class="col-md-3 col-5 my-auto justify-content-center">
+            <div class="col-md-3 col-6 my-auto justify-content-center">
                 <img class="foto-ketua" src="<%= divisi.ketua.foto %>" alt="foto kadiv">
             </div>
-            <div class="col-md-3 col-5 my-auto">
+            <div class="col-md-3 col-6 my-auto">
                 <h2> <%= divisi.ketua.nama %> </h2>
                 <h4 class="mb-5"> <%= divisi.ketua.jabatan %> </h4>
             </div>
@@ -73,8 +73,8 @@
         <div class="p-3">
             <span>
                 <a type="button" class="btn btn-dark m-2" href="/">Beranda</a>
-                <a type="button" class="btn btn-primary m-2" href="/#divisi">Daftar Divisi</a>
-                <a type="button" class="btn btn-success m-2" href="/pendaftaran">Daftar Sekarang</a>
+                <a type="button" class="btn btn-primary m-2" href="/#divisi">Divisi lainnya</a>
+                <a type="button" class="btn btn-success m-2" target="_blank" href="/pendaftaran">Daftar Sekarang</a>
             </span>
         </div>
         

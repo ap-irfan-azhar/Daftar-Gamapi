@@ -8,7 +8,7 @@ app.use(express.static("public"))
 
 app.get("/", function(req, res){
     let ph = [
-        {nama: "Vincenza Castaglione", jabatan: "Mahelis Mahasiswa", foto:"vincen.png"},
+        {nama: "Vincenza Castaglione", jabatan: "Majelis Mahasiswa", foto:"vincen.png"},
         {nama: "Zulfa Annisa", jabatan: "Bendahara 1", foto:"zulfa.png"},
         {nama: "Anugrah Sasi Raya", jabatan: "Bendahara2", foto:"sasi.png"},
         {nama: "Monica Nanda Bakti Nusa", jabatan: "Sekretaris1", foto:"monic.png"},
@@ -21,7 +21,7 @@ app.get("/", function(req, res){
         {nama: "Divisi Keilmuan", deskripsi: "Think the Unthinkable", link: "/divisi/keilmuan"},
         {nama: "Divisi Sosmas", deskripsi: "create, connect, collab", link:"/divisi/sosmas"},
         {nama: "Divisi MIT", deskripsi: "THINK CREATIVE.", link:"/divisi/mit"},
-        {nama: "Divisi Kawirus", deskripsi: "HIDUP CUAN gak jualan risol kok", link: "/divisi/kawirus"},
+        {nama: "Divisi Kawirus", deskripsi: "HIDUP CUAN  (Gak jualan risol kok 👍)" , link: "/divisi/kawirus"},
         {nama: "Divisi PPM", deskripsi: "santai berkualitas", link: "/divisi/ppm"}
     ]
 
@@ -92,7 +92,7 @@ app.get("/divisi/:id", function(req, res){
         new Pengurus("Maysa Ameera Andarini", "Ketua Divisi Humas", "maysa.png"),
         "Divisi Hubungan Masyarakat merupakan citra dari sebuah organisasi sekaligus menjadi wadah untuk berkarya, berkembang dan menciptakan nilai positif serta hubungan yang benefisial melalui kerjasama dengan pihak internal maupun external MKP",
         ["Long-lasting and meaningful connections", "Adaptability", "Advance your communication skills", "Create your Professional Portofolio with us"],
-        ["Memiliki minat dalam public relations ","Percaya diri", "Memiliki skill komunikasi yang baik", "Responsif", "Berkomitmen", "Berkomitmen", "Memiliki koneksi dengan pihak eksternal seperti media partners dan instansi lainnya is a plus!"],
+        ["Memiliki minat dalam public relations ","Percaya diri", "Memiliki skill komunikasi yang baik", "Responsif", "Berkomitmen", "Memiliki koneksi dengan pihak eksternal seperti media partners dan instansi lainnya is a plus!"],
         [
             new Proker("Halo, Gamapi?", "Halo, Gamapi merupakan platform dimana teman-teman MKP dapat menceritakan keresahan atau menyuarakan opini mereka. Program kerja ini inisiasi hotline pertama di Gamapi yang akan membantu menjaring aspirasi Mahasiswa MKP, loh!"),
             new Proker("Don’t Miss It!", "Jangan sampai kelewatan nih, info-info terkini mengenai beasiswa, lomba dan magang ya guys! Program kerja Don’t Miss It ini bertujuan untuk menyediakan informasi terkait lowongan magang, lomba, dan beasiswa kepada mahasiswa MKP melalui platform media sosial Gamapi."),
@@ -141,7 +141,7 @@ app.get("/divisi/:id", function(req, res){
         new Pengurus("Maulana Aji Negara", "Ketua Divisi Keilmuan", "aji.png"),
         "Divisi Keilmuan adalah divisi yang menjadi garda depan GAMAPI dalam pengawalan isu strategis, pengembangan khazanah keilmuan administrasi publik dan kebijakan publik, serta sebisa mungkin memberikan dasar ilmiah bagi GAMAPI dalam bertindak maupun bersikap sebagai organisasi mahasiswa",
         ["Mendapat Circle Rekan Berpikir", "Akselerasi ilmu", "Mengasah skill", "Panjat Sosial"],
-        ["Penting niat dulu dan mau belajar hal yang baru","Kritis, mampu mempertanyakan kembali asumsi yang ada", "Responsif, nggak cuma ngeread doang dan aktif saat diskusi atau rapat", "Mampu bekerja sama dalam tim", "Selalu update terhadap isu-isu aktual, nggak selalu isu yang berat-berat bisa juga lika-liku kemahasiswaan duniawi", "Terbuka akan kritik dan masukan", "ertanggung jawab dan jujur, loss ra rewel"],
+        ["Penting niat dulu dan mau belajar hal yang baru","Kritis, mampu mempertanyakan kembali asumsi yang ada", "Responsif, nggak cuma ngeread doang dan aktif saat diskusi atau rapat", "Mampu bekerja sama dalam tim", "Selalu update terhadap isu-isu aktual, nggak selalu isu yang berat-berat bisa juga lika-liku kemahasiswaan duniawi", "Terbuka akan kritik dan masukan", "Bertanggung jawab dan jujur, loss ra rewel"],
         [
             new Proker("Riset GAMAPI", "Melakukan riset terkait  topik strategis atau populer Contoh: Riset preferensi pemimpin politik, riset kesehatan mental, dll"),
             new Proker("Riset Internal GAMAPI", "Melakukan riset dalam rangka menilai GAMAPI sebagai sebuah organisasi"),
@@ -156,7 +156,7 @@ app.get("/divisi/:id", function(req, res){
         ],
         [
             new Pengurus("Ruth Manullang", "Sub Koor Kastrat", "ruth.png"),
-            new Pengurus("Benedikta Chiquita", "Sub Koor Riser", "chika.png"),
+            new Pengurus("Benedikta Chiquita", "Sub Koor Riset", "chika.png"),
             new Pengurus("Stefan Advent", "Subkoor Pengembangan Wawasan", "stefan.png")
         ],
         "keilmuan.png"
