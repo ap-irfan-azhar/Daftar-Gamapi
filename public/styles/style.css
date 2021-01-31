@@ -85,3 +85,27 @@ body{
     padding-top: 5vh;
 }
 
+.fit-screen{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.embed-responsive{
+    position: relative;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+}
+
+.text-justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.footer{
+    display: inline-block;
+}

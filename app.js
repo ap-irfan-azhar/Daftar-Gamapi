@@ -10,9 +10,9 @@ app.get("/", function(req, res){
     let ph = [
         {nama: "Vincenza Castaglione", jabatan: "Majelis Mahasiswa", foto:"vincen.png"},
         {nama: "Zulfa Annisa", jabatan: "Bendahara 1", foto:"zulfa.png"},
-        {nama: "Anugrah Sasi Raya", jabatan: "Bendahara2", foto:"sasi.png"},
-        {nama: "Monica Nanda Bakti Nusa", jabatan: "Sekretaris1", foto:"monic.png"},
-        {nama: "Nuzul Nur Hanifah", jabatan: "Sekretaris2", foto:"hani.png"},
+        {nama: "Anugrah Sasi Raya", jabatan: "Bendahara 2", foto:"sasi.png"},
+        {nama: "Monica Nanda Bakti Nusa", jabatan: "Sekretaris 1", foto:"monic.png"},
+        {nama: "Nuzul Nur Hanifah", jabatan: "Sekretaris 2", foto:"hani.png"},
     ]
 
     let divisi = [
@@ -21,12 +21,12 @@ app.get("/", function(req, res){
         {nama: "Divisi Keilmuan", deskripsi: "Think the Unthinkable", link: "/divisi/keilmuan"},
         {nama: "Divisi Sosmas", deskripsi: "create, connect, collab", link:"/divisi/sosmas"},
         {nama: "Divisi MIT", deskripsi: "THINK CREATIVE.", link:"/divisi/mit"},
-        {nama: "Divisi Kawirus", deskripsi: "HIDUP CUAN  (Gak jualan risol kok 👍)" , link: "/divisi/kawirus"},
+        {nama: "Divisi Kawirus", deskripsi: "HIDUP CUAN (Gak jualan risol kok 👍)" , link: "/divisi/kawirus"},
         {nama: "Divisi PPM", deskripsi: "santai berkualitas", link: "/divisi/ppm"}
     ]
 
 
-    res.render("homepage", {ph:ph, divisi:divisi})
+    res.render("homepage", {ph:ph, divisi:divisi, title: "Gamapi Butuh Kamu"})
 })
 
 app.get("/divisi/:id", function(req, res){
@@ -170,11 +170,11 @@ app.get("/divisi/:id", function(req, res){
         ["Belajar dalam event making / program making (cocok banget buat kamu pecinta dunia kreatif)", "Mengasah kemampuan berpikir secara kreatif dan inovatif", "Belajar berkoordinasi dan problem solving", "Udah pusing kejar deadline tugas tapi harus mikirin proker? Eits tenang aja program kerja di PPM dijamin anti spaneng", "team yang bisa diajak seru-seruan bareng anti baper!"],
         ["Kreatif dan inovatif", "Memiliki ketertarikan dibidang seni dan olahraga", "Proaktif, responsif dan komunikatif", "Dapat bekerja dalam tim", "berkomitmen"],
         [
-            new Proker("Kelas inspirasi", "Kelas online yang menyenangkan  seputar minat dan bakat mahasiswa"),
+            new Proker("PublicInspire", "Kelas online yang menyenangkan  seputar minat dan bakat mahasiswa"),
             new Proker("Ngluyur", "kegiatan jalan-jalan mahasiswa DMKP (psstt.. biasanya kita adain camping loh)"),
             new Proker("Paguyonan", "malam perayaan ulang tahun gamapi yang berisi pertunjukan seni oleh setiap angkatan"),
             new Proker("Lekker", "perlombaan seni dan olahraga antar angkatan mahasiswa DMKP"),
-            new Proker("GamapiCerita", "ruang bagi mahasiswa DMKP untuk berbagi cerita, pengalaman, minat, dan sebagainya"),
+            new Proker("Ruang Memikat", "ruang bagi mahasiswa DMKP untuk berbagi cerita, pengalaman, minat, dan sebagainya"),
             new Proker("GYMKP", "buat kamu yang mau olahraga tapi alesan gapunya temen, disini kita olahraga bareng sesama mahasiswa DMKP"),
             new Proker("MKP ALL STAR", "penjaringan para atlet MKP untuk mengikuti berbagai cabang olahraga"),
             new Proker("Movie date MKP", "gapuya pacar buat diajak nonton? Tenang aja MKP selalu siap menemani kalian^^"),
@@ -263,12 +263,27 @@ app.get("/divisi/:id", function(req, res){
             divisi = ppm;
             break;
     }
-    res.render("divisi", {divisi:divisi})
+    res.render("divisi", {divisi:divisi, title: divisi.nama})
 
 })
 
 app.get("/pendaftaran", function(req, res){
-    res.render("pendaftaran")
+
+    let open = new Date("feb 6, 2021 05:00:00").getTime()
+    let now = new Date().getTime()
+
+    let distance = open - now
+    
+    
+    page = distance <= 0 ? "pendaftaran": "countdown";
+    
+
+    res.render(page, {title: "Pendaftaran Gamapi"})
+})
+
+
+app.get("/how-to-apply", function(req, res){
+    res.render("how-to-apply", {title: "How to Apply"})
 })
 
 

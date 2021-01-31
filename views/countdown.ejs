@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs"); %>
+<body>
+
+    <div class="colored-section fit-screen row">
+        <div class="col-12 m-auto">
+            <div class="m-3 my-auto">
+                <h1 id="title">Pendaftaran Pengurus Gamapi 2021 akan dibuka dalam:</h1>
+            </div>
+
+            <div class="row justify-content-center my-5 pb-5">
+                <div class=" row m-3 col-lg-2 col-4">
+                    <p class="col-6 my-auto display-5 bg-dark border border-1 border-secondary justify-content-center" id="days">--</p>
+                    <p class="display-5 my-auto col-6"> Hari </p>
+                </div>
+                <div class=" row m-3 col-lg-2 col-4">
+                    <p class="col-6 my-auto display-5 bg-dark border border-1 border-secondary justify-content-center" id="hours">--</p>
+                    <p class="display-5 my-auto col-6"> Jam </p>
+                </div>
+                <div class=" row m-3 col-lg-2 col-4">
+                    <p class="col-6 my-auto display-5 bg-dark border border-1 border-secondary justify-content-center" id="minutes">--</p>
+                    <p class="display-5 my-auto col-6"> Menit </p>
+                </div>
+                <div class=" row m-3 col-lg-2 col-4">
+                    <p class="col-6 my-auto display-5 bg-dark border border-1 border-secondary justify-content-center" id="seconds">--</p>
+                    <p class="display-5 my-auto col-6"> Detik </p>
+                </div>
+
+
+            </div>
+            <div class="p-3 align-bottom">
+                <span>
+                    <a type="button" class="btn btn-dark m-2" href="/">Beranda</a>
+                    <a type="button" class="btn btn-primary m-2" href="/#divisi">Divisi lainnya</a>
+
+                    <a type="button" class="btn btn-info m-2" href="/how-to-apply">How to Apply</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="../script/countdown.js"></script>  
+<%- include("partials/footer.ejs"); %>
