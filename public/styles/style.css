@@ -109,3 +109,7 @@ body{
 .footer{
     display: inline-block;
 }
+
+.text-weight-bold{
+    font-weight: bold;
+}

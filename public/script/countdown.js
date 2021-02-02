@@ -1,7 +1,7 @@
-let openFormDate = new Date("feb 6, 2021 05:00:00").getTime();
+let openFormDate = new Date("feb 6, 2021 05:00:00").getTime(); //based on utc time
 
 let countdown = setInterval(function(){
-    let now = new Date().getTime();
+    let now = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime();
     distance = openFormDate - now;
     
     days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -11,7 +11,7 @@ let countdown = setInterval(function(){
         hours = "0" + hours;
     }
     
-    minutes = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
     if (minutes < 10){
         minutes = "0" + minutes;
     }

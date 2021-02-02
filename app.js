@@ -8,7 +8,7 @@ app.use(express.static("public"))
 
 app.get("/", function(req, res){
     let ph = [
-        {nama: "Vincenza Castaglione", jabatan: "Majelis Mahasiswa", foto:"vincen.png"},
+        {nama: "Vincenza Castiglione", jabatan: "Majelis Mahasiswa", foto:"vincen.png"},
         {nama: "Zulfa Annisa", jabatan: "Bendahara 1", foto:"zulfa.png"},
         {nama: "Anugrah Sasi Raya", jabatan: "Bendahara 2", foto:"sasi.png"},
         {nama: "Monica Nanda Bakti Nusa", jabatan: "Sekretaris 1", foto:"monic.png"},
@@ -63,10 +63,10 @@ app.get("/divisi/:id", function(req, res){
     let mit = new Divisi(
         "Divisi Multimedia Informasi dan Teknologi",
         "MIT",
-        new Pengurus("Kinanthi Sinaring Tyas", "Ketua DIvisi MIT", "kinan.png"),
+        new Pengurus("Kinanthi Sinaring Tyas", "Ketua Divisi MIT", "kinan.png"),
         "Kreatif jadi salah satu poin penting dalam menyediakan ruang bagi mahasiswa DMKP untuk berkarya, terutama di dalam penggunaan teknologi digital, seperti alat digital, internet, sosial media, dan lain sebagainya. Di MIT, kita bisa menjadi super team, untuk saling berbagi ilmu, saling menyatukan ide, saling cari tahu solusi, dan saling-saling lainnya!",
         ["Kita bekerja sama sebagai tim, bantuan akan selalu datang kapan saja kamu butuh", "Kita bisa menuangkan ide-ide yang masih fresh, yang baru keluar dari kepala kita", "Bosan sama perkuliahan belajar tentang kebijakan publik? Di sini, kamu bisa me-refresh pikiran kamu sejenak, sekaligus mengasah hard-skill kamu yang keren itu!", "Punya pertemanan yang solid dengan our super team!", "Belajar banyak hal baru, seperti branding media sosial, analisis media sosial, etc!"],
-        ["Mau belajar bareng ", "Responsif", "Mampu menghadapi tekanan ", "Mampu menciptakan ide/alternatif baru", "krab dengan penggunaan teknologi", "Memiliki akses internet yang cukup baik"],
+        ["Mau belajar bareng ", "Responsif", "Mampu menghadapi tekanan ", "Mampu menciptakan ide/alternatif baru", "Akrab dengan penggunaan teknologi", "Memiliki akses internet yang cukup baik"],
         [
             new Proker("Monday Info Unic", "Informasi yang hadir setiap Senin mengenai seluk beluk lingkungan kampus dan isu-isu yang sedang terjadi di media sosial Indonesia."),
             new Proker("What’s On Today?", "Informasi singkat mengenai perayaan hari-hari besar di Indonesia dan dunia internasional."),
@@ -81,7 +81,7 @@ app.get("/divisi/:id", function(req, res){
             new Pengurus("Muhammad Irfan Azhar", "Sub Koor IT", "irfan.png"),
             new Pengurus("Ksatria Okta Perdana", "Sub Koor Desain", "okta.png"),
             new Pengurus("Kartika Dwi Safarina", "Sub Koor Kreatif", "kartika.png"),
-            new Pengurus("Nur Adhi Inawan", "Sub Koor Publikasi", "adhi.png")
+            new Pengurus("Nur Adhi Inawan", "Sub Koor Media", "adhi.png")
         ],
             "mit.png"
     )
@@ -116,7 +116,7 @@ app.get("/divisi/:id", function(req, res){
     let kawirus = new Divisi(
         "Divisi Kewirausahaan",
         "Kawirus",
-        new Pengurus("Fanny fegiansyah", "Ketua Divisi Kewirausahaan", "fanny.png"),
+        new Pengurus("Fanny Fegiansyah", "Ketua Divisi Kewirausahaan", "fanny.png"),
         "Kawirus merupakan tempat bagi mahasiswa DMKP yang berminat untuk bersama-sama memenuhi hasrat berwirausahanya. Selain itu, divisi ini juga sebagai penyokong dana tetap GAMAPI setiap tahun. ",
         ["Mendapat insights langsung mengenai entrepreneurship (kewirausahaan) melalui program kerja Kawirus", "Menambah teman", "Menambah skill entrepreneurship dong pastinya, karena pada saat ini skill entrepreneurship merupakan soft skill yang sangat dibutuhkan mahasiswa", "Dapat sharing investasi/reksadana/saham bersama"],
         ["Niat, jujur, dan komitmen", "Mau belajar dan berusaha", "Kreatif dan inovatif dalam bidang wirausaha", "Punya link sponsor (nilai plus)", "Punya usaha atau berniat ingin membuka usaha (nilai plus)"],
@@ -215,8 +215,8 @@ app.get("/divisi/:id", function(req, res){
     let psdm = new Divisi(
         "Biro Pengembangan Sumberdaya Manusia",
         "PSDM",
-        new Pengurus("Gaudentius Deanda Mahendra Putra", "Ketua Divisi PSDM", "dean.png"),
-        "Divisi dengan tanggungjawab esktra dengan fokus internal dan kaderisasi. PSDM berusaha untuk menangkap isu dan permasalahan individu di Gamapi lalu berusaha menemukan solusinya. Di samping menyamankan, menentramkan, serta menjadi support system dari Gamapi. Recruitment, pengawasan, penilaian, serta evaluasi juga tanggungjawab PSDM yang lainnya",
+        new Pengurus("Gaudentius Deanda Mahendra Putra", "Ketua Biro PSDM", "dean.png"),
+        "Biro dengan tanggungjawab esktra dengan fokus internal dan kaderisasi. PSDM berusaha untuk menangkap isu dan permasalahan individu di Gamapi lalu berusaha menemukan solusinya. Di samping menyamankan, menentramkan, serta menjadi support system dari Gamapi. Recruitment, pengawasan, penilaian, serta evaluasi juga tanggungjawab PSDM yang lainnya",
         ["Keluarga baru yang seru dan menyenangkan (networking bertambah so pasti!)", "Keorganisasian yang seru dan ga kaku tetapi tetap bertanggungjawab (koor dan subkoor anti spaneng-spaneng club)", "Mengasah kemampuan problem solving", "Bisa jadi mata-mata divisi lain lhooo", "Kemampuan manajerial sumber daya manusia a.k.a latihan jadi HRD gitu (belajar bentuk konkret dari matkul sem 2 yaitu MSDM juga nih)"],
         ["Mau belajar dan berkembang: PSDM butuh temen-temen yang mau berjalan dan berlari bersama karena “No One Left Behind”", "Lebih suka bekerja dalam tim: PSDM suka gotong royong karena sekaligus mengamalkan sila ke-3 Pancasila", "Peduli sesama dan proaktif (kalo rajin menabung juga boleh sih hehehe)", "Cekatan dan berkomitmen", "Ceria, rame, asyik: karena PSDM ingin membangun suasana yang menyenangkan dan mengasyikkan", "No drama-baper club: karena drama hanya diperlukan di drakor, sinetron, dan setingan artis"],
         [
@@ -269,14 +269,14 @@ app.get("/divisi/:id", function(req, res){
 
 app.get("/pendaftaran", function(req, res){
 
-    let open = new Date("feb 6, 2021 05:00:00").getTime()
-    let now = new Date().getTime()
-
-    let distance = open - now
+    const openFormDate = new Date("feb 6, 2021 05:00:00").getTime() //based on utc time
+    let now = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime()
+    
+    let distance = openFormDate - now
     
     
     page = distance <= 0 ? "pendaftaran": "countdown";
-    
+
 
     res.render(page, {title: "Pendaftaran Gamapi"})
 })

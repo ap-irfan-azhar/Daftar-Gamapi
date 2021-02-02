@@ -16,14 +16,14 @@
                 <h3>Jika Bergabung dengan <%= divisi.namaAbb %> kamu dapat:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.benefit.length; i++){ %> 
-                    <li class="list-group-item bg-dark text-white d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.benefit[i] %></li>
+                    <li class="list-group-item bg-light text-dark text-weight-bold d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.benefit[i] %></li>
                  <% } %>   
             </div>            
             <div class="col-md-6 col-11">
                 <h3>Divisi <%= divisi.namaAbb %> cocok untuk kamu yang:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.cocok.length; i++){ %> 
-                    <li class="list-group-item bg-dark text-white d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.cocok[i] %></li>
+                    <li class="list-group-item bg-light text-dark text-weight-bold d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.cocok[i] %></li>
                 <% } %>
                     
             </div>            
@@ -36,7 +36,7 @@
         <div class="album">
             <div class="row my-3 justify-content-center">
                 <% for(let i=0; i<divisi.proker.length; i++){ %>
-                    <div class=" container-md col-md-3 col-sm-6 col-10 p-3 m-2 bg-light border border-dark border-1 rounded">
+                    <div class=" container-md col-lg-3 col-md-4 col-sm-6 col-10 p-3 m-2 bg-light border border-dark border-1 rounded">
                         <h3 class="bg-dark text-white d-inline-flex px-2 rounded"> <%= divisi.proker[i].nama %> </h3>
                         <p class="mb-5"> <%= divisi.proker[i].deskripsi %></p>
                     </div>
