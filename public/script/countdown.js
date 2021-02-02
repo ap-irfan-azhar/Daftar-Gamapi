@@ -1,4 +1,4 @@
-let openFormDate = new Date("feb 6, 2021 05:00:00").getTime(); //based on utc time
+let openFormDate = new Date(new Date("feb 6, 2021 05:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime(); //based on utc
 
 let countdown = setInterval(function(){
     let now = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime();
@@ -28,10 +28,10 @@ let countdown = setInterval(function(){
     
     if (distance <= 0){
         document.getElementById("title").innerText = "Refresh halaman untuk membuka formulir pendaftaran"
-        document.getElementById("days").innerText = 0
-        document.getElementById("hours").innerText = 0
-        document.getElementById("minutes").innerText = 0
-        document.getElementById("seconds").innerText = 0
+        document.getElementById("days").innerText = "0"
+        document.getElementById("hours").innerText = "00"
+        document.getElementById("minutes").innerText = "00"
+        document.getElementById("seconds").innerText = "00"
         clearInterval(countdown)
     }
 

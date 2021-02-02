@@ -269,7 +269,7 @@ app.get("/divisi/:id", function(req, res){
 
 app.get("/pendaftaran", function(req, res){
 
-    const openFormDate = new Date("feb 6, 2021 05:00:00").getTime() //based on utc time
+    const openFormDate = new Date(new Date("feb 6, 2021 05:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime()
     let now = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime()
     
     let distance = openFormDate - now
