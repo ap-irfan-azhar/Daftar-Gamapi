@@ -8,7 +8,7 @@
             </div>
             <div class="col-lg-6 col-md-7">
                 <h1 class="m-3 mb-5 heading-title display-4"><%= divisi.nama %> </h1>
-                <h4 class="mb-5"><%= divisi.deskripsi %> </h4>
+                <h4 class="mb-5 text-justify mx-3"><%= divisi.deskripsi %> </h4>
             </div>
         </div>
         <div class="row mx-5 pb-5 justify-content-center my-3">
@@ -20,7 +20,7 @@
                  <% } %>   
             </div>            
             <div class="col-md-6 col-11">
-                <h3>Divisi <%= divisi.namaAbb %> cocok untuk kamu yang:</h3>
+                <h3><%= divisi.namaAbb %> cocok untuk kamu yang:</h3>
                 <ul class="list-group"></ul>
                 <% for(let i=0; i<divisi.cocok.length; i++){ %> 
                     <li class="list-group-item bg-light text-dark text-weight-bold d-inline-flex mx-1 my-2 rounded border border-1 border-light"> <%= divisi.cocok[i] %></li>
@@ -70,15 +70,31 @@
 
         </div>
         
-        <div class="p-3">
-            <span>
-                <a type="button" class="btn btn-dark m-2" href="/">Beranda</a>
-                <a type="button" class="btn btn-primary m-2" href="/#divisi">Divisi lainnya</a>
-                <a type="button" class="btn btn-success m-2" href="/pendaftaran">Daftar Sekarang</a>
-                <a type="button" class="btn btn-info m-2" href="/how-to-apply">How to Apply</a>
-            </span>
-        </div>
         
+        
+    </div>
+    
+    <div class="proker pt-3 white-section mb-5">
+        <h1 class="m-5">Sub Divisi</h1>
+        <div class="album">
+            <div class="row my-3 justify-content-center">
+                <% for(let i=0; i<divisi.subDivisi.length; i++){ %>
+                    <div class=" container-md col-md-5 col-sm-6 col-10 p-3 m-4 bg-light border border-dark border-1 rounded">
+                        <h3 class="bg-dark text-white d-inline-flex px-2 rounded"> <%= divisi.subDivisi[i].nama %> </h3>
+                        <p class="mb-5 text-justify"> <%= divisi.subDivisi[i].deskripsi %></p>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            
+            <div class="px-3 mt-5">
+                <span>
+                    <a type="button" class="btn btn-dark m-2" href="/">Beranda</a>
+                    <a type="button" class="btn btn-primary m-2" href="/#divisi">Divisi lainnya</a>
+                    <a type="button" class="btn btn-success m-2" href="/pendaftaran">Daftar Sekarang</a>
+                    <a type="button" class="btn btn-info m-2" href="/how-to-apply">How to Apply</a>
+                </span>
+            </div>
     </div>
     
     <%- include("partials/footer.ejs"); %>

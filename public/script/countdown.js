@@ -1,8 +1,8 @@
-let openFormDate = new Date(new Date("feb 6, 2021 05:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime(); //based on utc
+let openFormDate = new Date(new Date("feb 6, 2021 05:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime(); //based on utc time
 
 let countdown = setInterval(function(){
-    let now = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime();
-    distance = openFormDate - now;
+    let currentTime = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime();
+    distance = openFormDate - currentTime;
     
     days = Math.floor(distance / (1000 * 60 * 60 * 24));
     

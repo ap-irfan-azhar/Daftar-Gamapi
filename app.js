@@ -40,7 +40,7 @@ app.get("/divisi/:id", function(req, res){
     }
 
     class Divisi{
-        constructor(nama, namaAbb, ketua, deskripsi, benefit, cocok, proker, subkoor, logo){
+        constructor(nama, namaAbb, ketua, deskripsi, benefit, cocok, proker, subkoor, logo, subDivisi){
             this.nama = nama
             this.namaAbb = namaAbb
             this.ketua = ketua
@@ -50,12 +50,20 @@ app.get("/divisi/:id", function(req, res){
             this.proker = proker
             this.subkoor = subkoor
             this.logo = `../images/logo/${logo}`
+            this.subDivisi = subDivisi
         }
     }
 
     class Proker{
         constructor(nama, deskripsi){
             this.nama = nama
+            this.deskripsi = deskripsi
+        }
+    }
+
+    class SubDivisi{
+        constructor(nama, deskripsi){
+            this.nama = "Sub Divisi " + nama
             this.deskripsi = deskripsi
         }
     }
@@ -83,7 +91,13 @@ app.get("/divisi/:id", function(req, res){
             new Pengurus("Kartika Dwi Safarina", "Sub Koor Kreatif", "kartika.png"),
             new Pengurus("Nur Adhi Inawan", "Sub Koor Media", "adhi.png")
         ],
-            "mit.png"
+            "mit.png",
+        [
+            new SubDivisi("Kreatif", "Pengelolaan dan pengembangan konsep dari seluruh media yang digunakan oleh Gamapi. dan Penyalur aspirasi berupa saran ide/konten dari pihak eksternal dan internal dari Gamapi maupun luar Gamapi. "),
+            new SubDivisi("Desain", "Perancangan desain visual media Gamapi dalam bentuk foto, video, maupun audio. dan endokumentasian segala bentuk kegiatan Gamapi, baik di lingkungan internal maupun eksternal."),
+            new SubDivisi("Media", "Penyebaran informasi melalui publikasi desain dari kegiatan Gamapi. Pengelola segala bentuk media sosial Gamapi. Pembuatan analisis media sosial (social media marketing) Gamapi."),
+            new SubDivisi("IT", "Pengembangan website dan e-mail Gamapi dan penyediaan sarana teknologi informasi bagi pengurus Gamapi.")
+        ]
     )
 
     let humas = new Divisi(
@@ -109,7 +123,11 @@ app.get("/divisi/:id", function(req, res){
             new Pengurus("Nandariza Yoga Pertiwi", "Subkoor Advokasi", "nanda.png"),
             new Pengurus("Reza Triana Putri", "Subkoor Eksternal", "reza.png")
         ],
-        "humas.png"
+        "humas.png",
+        [
+            new SubDivisi("Advokasi", "Menghimpun aspirasi serta keluhan mahasiswa MKP kemudian menindaklanjut permasalahan mahasiswa dalam wujud program kerja sub divisi Advokasi sekaligus menjadi penghubung serta memfasilitasi interaksi dua arah antara mahasiswa MKP dengan pihak departemen."),
+            new SubDivisi("Eksternal", "Eksternal memiliki fungsi untuk menjembatani pihak GAMAPI dengan pihak luar (eksternal) dalam menjalin hubungan baik dan kerjasama., menjalin hubungan yang baik dengan  semua organisasi dan/atau  instansi agar GAMAPI mempunyai citra yang baik di luar serta bertanggungjawab atas program kerja yang melibatkan pihak luar GAMAPI (Policy O Rama, Public Visit, GAMAPI Roadshow, dan lain sebagainya)")
+        ]
 
     )
 
@@ -132,7 +150,11 @@ app.get("/divisi/:id", function(req, res){
             new Pengurus("Vika Apriyani", "Sub Koor Pengembangan", "vika.png"),
             new Pengurus("Diva Humaira", "Sub Koor Dana Usaha", "diva.png")
         ],
-        "kawirus.png"
+        "kawirus.png", 
+        [
+        new SubDivisi("Pengembangan Kewirausahaan", "memiliki tugas dan berfokus pada melaksanakan progam kerja yang berhubungan dengan pengembangan minat kewirausahaan mahasiswa DMKP dan juga pengembangan minat mengenai financial planning serta investasi."),
+        new SubDivisi("Dana Usaha", "memiliki tugas dan berfokus pada melaksanakan program kerja yang berhubungan dengan dana usaha untuk menyokong keuangan Gamapi.")
+        ]
     )
 
     let keilmuan = new Divisi(
@@ -159,7 +181,12 @@ app.get("/divisi/:id", function(req, res){
             new Pengurus("Benedikta Chiquita", "Sub Koor Riset", "chika.png"),
             new Pengurus("Stefan Advent", "Subkoor Pengembangan Wawasan", "stefan.png")
         ],
-        "keilmuan.png"
+        "keilmuan.png",
+        [
+            new SubDivisi("Kastrat", "Melakukan fungsi pengkajian terkait isu-isu strategis aktual dan faktual yang sejalan dengan disiplin ilmu administrasi publik dan kebijakan publik."),
+            new SubDivisi("Riset", "Melakukan fungsi penelitian terhadap topik isu strategis atau populer yang aktual dan faktual dengan tetap mengupayakan penggunaan metode ilmiah yang memadai"),
+            new SubDivisi("Pengembangan Wawasan", "Melakukan fungsi pengembangan wawasan keilmuan, intelektualitas, dan kemampuan berpikir kritis yang ditujukan untuk seluruh Mahasiswa Manajemen dan Kebijakan Publik")
+        ]
     )
 
     let ppm = new Divisi(
@@ -176,7 +203,7 @@ app.get("/divisi/:id", function(req, res){
             new Proker("Lekker", "perlombaan seni dan olahraga antar angkatan mahasiswa DMKP"),
             new Proker("Ruang Memikat", "ruang bagi mahasiswa DMKP untuk berbagi cerita, pengalaman, minat, dan sebagainya"),
             new Proker("GYMKP", "buat kamu yang mau olahraga tapi alesan gapunya temen, disini kita olahraga bareng sesama mahasiswa DMKP"),
-            new Proker("MKP ALL STAR", "penjaringan para atlet MKP untuk mengikuti berbagai cabang olahraga"),
+            new Proker("MKP ALL STAR", "penjaringan para atlet MKP untuk mengikuti berbagai berbagai perlombaan olahraga"),
             new Proker("Movie date MKP", "gapuya pacar buat diajak nonton? Tenang aja MKP selalu siap menemani kalian^^"),
             new Proker("Pameran MKP", "empat bagi mahasiswa DMKP menunjukkan hasil karya seni yang telah dibuat"),
             new Proker("Selasa korsa", "menurut survey, pakai korsa bareng-bareng bisa meningkatkan ke-kecean kamu loh...")
@@ -185,7 +212,11 @@ app.get("/divisi/:id", function(req, res){
             new Pengurus("Rizka Khairunissa Herdiani", "Sub Koor Seni", "rizka.png"),
             new Pengurus("Thoriqul Falah", "Sub Koor Olahraga", "thoriq.png")
         ],
-        "ppm.png"
+        "ppm.png",
+        [
+            new SubDivisi("Seni", "Berfokus untuk mewadahi dan memfasilitasi  mahasiswa DMKP dalam serta mengembangkan minat dan bakat dibidang seni Mengapresiasi minat dan bakat mahasiswa MKP dibidang seni dalam suatu program kerja."),
+            new SubDivisi("Olahraga", "Berfokus untuk melakukan penjaringan mahasiswa DMKP yang memiliki minat dan bakat dibidang olahraga sekaligus mewadahi dan memfasilitasi mahasiswa DMKP dalam menyalurkan minat dan bakat dibidang olahraga.")
+        ]
     )
 
     let sosmas = new Divisi(
@@ -209,7 +240,11 @@ app.get("/divisi/:id", function(req, res){
             new Pengurus("Ariel Teguh Wibowo", "Sub Koor Sosial", "ariel.png"),
             new Pengurus("Dyah Ayu Ningrum", "Sub Koor Pengembangan Desa", "ayu.png")
         ],
-        "sosmas.png"
+        "sosmas.png",
+        [
+            new SubDivisi("Sosial", "Berfokus pada pelayanan kepada masyarakat dalam bentuk kegiatan sosial serta diharapkan mampu menjadi tombak Gamapi untuk tanggap dan peduli terhadap isu-isu sosial."),
+            new SubDivisi("Pengembangan Desa", "Menjadi ruang untuk kontribusi langsung kepada masyarakat dan berkolaborasi bersama beberapa stakeholders untuk membangun desa.")
+        ]
     )
 
     let psdm = new Divisi(
@@ -236,7 +271,10 @@ app.get("/divisi/:id", function(req, res){
         [
             new Pengurus("Annisa Nubian Pasha", "Sub Koor PSDM", "pasha.png")
         ],
-        "psdm.png"
+        "psdm.png",
+        [
+            new SubDivisi("PSDM", "Penasaran kan kenapa PSDM cuman 1 subkoor? Dengan satu subkoor, sudah cukup meng-handle dari tupoksi PSDM karena kita bergotong royong. Tapi tenang, fokus PSDM tetap dapat menjangkau semuanya. Subkoor PSDM berfokus pada kerja sama dan peningkatkan program bersama dengan ketua divisi. Subkoor PSDM bersama dengan ketua divisi berfokus pada pengembangan internal dan kaderisasi.")
+        ]
     )
 
 
@@ -269,10 +307,10 @@ app.get("/divisi/:id", function(req, res){
 
 app.get("/pendaftaran", function(req, res){
 
-    const openFormDate = new Date(new Date("feb 6, 2021 05:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime()
-    let now = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime()
+    const openFormDate = new Date(new Date("feb 6, 2021 05:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime() //based on utc time
+    let currentTime = new Date(Date("GMT+0")).getTime()
     
-    let distance = openFormDate - now
+    let distance = openFormDate - currentTime
     
     
     page = distance <= 0 ? "pendaftaran": "countdown";
