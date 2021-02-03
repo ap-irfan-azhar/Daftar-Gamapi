@@ -119,22 +119,23 @@ body{
     overflow: hidden;
     position: relative;
     bottom: 3vh;
+    white-space: nowrap;
 }
 
 .marquee-text{
     position: absolute;
-    width: 100%;
+    width: fit-content;
     height: 100%;
     margin: 0;
     line-height: 50px;
     text-align: center;
     /* Starting position */
-    transform:translateX(-100%);
+    transform:translateX(200%);
     animation: cssmarquee 20s linear infinite;
     }
     @keyframes cssmarquee {
     0% {
-    transform: translateX(100%);
+    transform: translateX(200%);
     }
     100% {
     transform: translateX(-100%);
