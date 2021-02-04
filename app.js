@@ -205,7 +205,7 @@ app.get("/divisi/:id", function(req, res){
             new Proker("GYMKP", "buat kamu yang mau olahraga tapi alesan gapunya temen, disini kita olahraga bareng sesama mahasiswa DMKP"),
             new Proker("MKP ALL STAR", "penjaringan para atlet MKP untuk mengikuti berbagai berbagai perlombaan olahraga"),
             new Proker("Movie date MKP", "gapuya pacar buat diajak nonton? Tenang aja MKP selalu siap menemani kalian^^"),
-            new Proker("Pameran MKP", "empat bagi mahasiswa DMKP menunjukkan hasil karya seni yang telah dibuat"),
+            new Proker("Pameran MKP", "Tempat bagi mahasiswa DMKP menunjukkan hasil karya seni yang telah dibuat"),
             new Proker("Selasa korsa", "menurut survey, pakai korsa bareng-bareng bisa meningkatkan ke-kecean kamu loh...")
         ],
         [
@@ -269,11 +269,14 @@ app.get("/divisi/:id", function(req, res){
             new Proker("Gamapi? Curhat Yuk!", "berusaha menangkap keluh-kesah permasalahan individu di Gamapi lalu bersama kita elaborasikan untuk mencari solusinya")
         ],
         [
-            new Pengurus("Annisa Nubian Pasha", "Sub Koor PSDM", "pasha.png")
+            new Pengurus("Annisa Nubian Pasha", "Wakil Ketua Biro PSDM", "pasha.png")
         ],
         "psdm.png",
         [
-            new SubDivisi("PSDM", "Penasaran kan kenapa PSDM cuman 1 subkoor? Dengan satu subkoor, sudah cukup meng-handle dari tupoksi PSDM karena kita bergotong royong. Tapi tenang, fokus PSDM tetap dapat menjangkau semuanya. Subkoor PSDM berfokus pada kerja sama dan peningkatkan program bersama dengan ketua divisi. Subkoor PSDM bersama dengan ketua divisi berfokus pada pengembangan internal dan kaderisasi.")
+            {
+                nama: "Sub Biro PSDM",
+                deskripsi: "Penasaran kan kenapa PSDM cuman 1 subkoor? Dengan satu subkoor, sudah cukup meng-handle dari tupoksi PSDM karena kita bergotong royong. Tapi tenang, fokus PSDM tetap dapat menjangkau semuanya. Subkoor PSDM berfokus pada kerja sama dan peningkatkan program bersama dengan ketua divisi. Subkoor PSDM bersama dengan ketua divisi berfokus pada pengembangan internal dan kaderisasi."
+            }
         ]
     )
 
