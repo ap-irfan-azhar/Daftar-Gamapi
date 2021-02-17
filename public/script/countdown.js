@@ -1,4 +1,6 @@
-let changePageDate = document.getElementById("changePageDate").getAttribute("Data")
+let changeDate = document.getElementById("changePageDate").getAttribute("Data")
+
+let changePageDate = new Date(new Date(`${changeDate} GMT+0`).toLocaleString("en-US", {timeZone: "utc"})).getTime();
 
 let countdown = setInterval(function(){
     let currentTime = new Date(new Date().toLocaleString("en-US", {timeZone: "utc"})).getTime();

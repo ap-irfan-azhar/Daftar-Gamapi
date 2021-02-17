@@ -309,8 +309,9 @@ app.get("/divisi/:id", function(req, res){
 })
 
 app.get("/pendaftaran", function(req, res){
+    date = "feb 6, 2021 05:00:00"
 
-    const openFormDate = new Date(new Date("feb 6, 2021 05:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime() //based on utc time
+    const openFormDate = new Date(new Date(`${date} GMT+0`).toLocaleString("en-US", {timeZone: "utc"})).getTime() //based on utc time
     let currentTime = new Date(Date("GMT+0")).getTime()
     
     let distance = openFormDate - currentTime
@@ -329,7 +330,8 @@ app.get("/how-to-apply", function(req, res){
 })
 
 app.get("/hasil", function(req, res){
-    const resultDate = new Date(new Date("feb 18, 2021 13:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime() //based on utc time
+    let date = "feb 18, 2021 13:00:00";
+    const resultDate = new Date(new Date(`${date} GMT+0`).toLocaleString("en-US", {timeZone: "utc"})).getTime() //based on utc time
     let currentTime = new Date(Date("GMT+0")).getTime()
 
     let distance = resultDate - currentTime
@@ -389,7 +391,7 @@ app.get("/hasil", function(req, res){
         if(distance <= 0){
             res.render("hasil", {title:"Hasil Seleksi", hasilSeleksi})
         } else{
-            res.render("countdown", {title: "Hasil Seleksi", changePageDate: resultDate, pageTitle })
+            res.render("countdown", {title: "Hasil Seleksi", changePageDate: date, pageTitle })
         }
 
     })
