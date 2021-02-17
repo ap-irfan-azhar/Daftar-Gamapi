@@ -318,8 +318,9 @@ app.get("/pendaftaran", function(req, res){
     
     page = distance <= 0 ? "pendaftaran": "countdown";
 
+    pageTitle = "Pendaftaran pengurus Gamapi 2021 akan dibuka dalam"
 
-    res.render(page, {title: "Pendaftaran Gamapi"})
+    res.render(page, {title: "Pendaftaran Gamapi", changePageDate: openFormDate, pageTitle})
 })
 
 
@@ -327,5 +328,71 @@ app.get("/how-to-apply", function(req, res){
     res.render("how-to-apply", {title: "How to Apply"})
 })
 
+app.get("/hasil", function(req, res){
+    const resultDate = new Date(new Date("feb 18, 2021 13:00:00 GMT+0").toLocaleString("en-US", {timeZone: "utc"})).getTime() //based on utc time
+    let currentTime = new Date(Date("GMT+0")).getTime()
 
-app.listen(process.env.PORT || "3000")
+    let distance = resultDate - currentTime
+
+
+    
+    pageTitle = "Hasil seleksi pengurus Gamapi 2021 akan diumumkan dalam"
+    
+    
+    class Divisi{
+        constructor(nama, pengurus){
+            this.nama = nama
+            this.pengurus =pengurus
+        }
+    }
+    
+    class Pengurus{
+        constructor(nama, subDivisi){
+            this.nama = nama
+            this.subDivisi = subDivisi
+        }
+    }
+    
+    let hasilSeleksi = [
+        new Divisi(
+            "Biro PSDM",
+            [
+            new Pengurus("PSDM1", "PSDM"),
+            new Pengurus("PSDM2", "PSDM"),
+            new Pengurus("PSDM3", "PSDM"),
+            new Pengurus("PSDM4", "PSDM"),
+            new Pengurus("PSDM5", "PSDM")
+            ]
+        ),              
+        new Divisi(
+            "Divisi Keilmuan",
+            [
+            new Pengurus("Keilmuan1", "Riset"),
+            new Pengurus("Keilmuan2", "Riset"),
+            new Pengurus("Keilmuan3", "Kastrat"),
+            new Pengurus("Keilmuan4", "Kastrat")
+            ]
+        ),              
+        new Divisi(
+            "Divisi Kawirus",
+            [
+            new Pengurus("Kawirus1", "Dana Usaha"),
+            new Pengurus("Kawirus2", "Pengembangan"),
+            new Pengurus("Kawirus3", "Pengembangan")
+            ]
+        )              
+        ]
+            
+
+
+
+        if(distance <= 0){
+            res.render("hasil", {title:"Hasil Seleksi", hasilSeleksi})
+        } else{
+            res.render("countdown", {title: "Hasil Seleksi", changePageDate: resultDate, pageTitle })
+        }
+
+    })
+        
+        
+    app.listen(process.env.PORT || "3000")

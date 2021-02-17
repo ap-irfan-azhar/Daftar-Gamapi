@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs"); %>
+<body>
+    <div class="colored-section pb-5">
+        <h1 class="my-5">Hasil Seleksi Pengurus Gamapi 2021</h1>
+        <div class="row justify-content-center">
+            <% hasilSeleksi.forEach((divisi) =>{ %>
+            <div class="col-lg-5 col-md-8 col-10 text-light m-3">
+                <h2><%= divisi.nama %></h2>
+                <table class="table table-dark table-striped table-hover">
+                    <thead>
+                        <tr>                           
+                            <th scope="col"> Nama </th>
+                            <th scope="col"> Sub Divisi </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% divisi.pengurus.forEach((pengurus) => { %>
+                            <tr>
+                                <td><%= pengurus.nama %></td>
+                                <td><%= pengurus.subDivisi %></td>
+                            </tr>
+                        
+                        <% }) %>
+                    </tbody>
+
+                </table>
+
+            </div>
+            <% }) %>
+
+        </div>
+
+        <a type="button" class="btn btn-success m-2 btn-lg" href="/">Beranda</a>
+    </div>
+<%- include("partials/footer.ejs"); %>
