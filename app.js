@@ -469,7 +469,6 @@ app.get("/Pengumuman", function(req, res){
 
         if(distance <= 0){
             res.render("hasil", {title:"Hasil Seleksi", hasilSeleksi})
-            console.log(distance)
         } else{
             res.render("countdown", {title: "Hasil Seleksi", changePageDate: date, pageTitle })
         }
