@@ -329,7 +329,7 @@ app.get("/how-to-apply", function(req, res){
     res.render("how-to-apply", {title: "How to Apply"})
 })
 
-app.get("/hasil", function(req, res){
+app.get("/Pengumuman", function(req, res){
     let date = "feb 18, 2021 13:00:00";
     const resultDate = new Date(new Date(`${date} GMT+0`).toLocaleString("en-US", {timeZone: "utc"})).getTime() //based on utc time
     let currentTime = new Date(Date("GMT+0")).getTime()
@@ -359,30 +359,109 @@ app.get("/hasil", function(req, res){
         new Divisi(
             "Biro PSDM",
             [
-            new Pengurus("PSDM1", "PSDM"),
-            new Pengurus("PSDM2", "PSDM"),
-            new Pengurus("PSDM3", "PSDM"),
-            new Pengurus("PSDM4", "PSDM"),
-            new Pengurus("PSDM5", "PSDM")
+                new Pengurus("Herera Aribah Respati", "PSDM"),
+                new Pengurus("Prima Aprilia", "PSDM"),
+                new Pengurus("Anisya Carla Clarinda", "PSDM"),
+                new Pengurus("Syifaa Aqilla Hafidz", "PSDM"),
+                new Pengurus("Hermina Mareta Sari", "PSDM"),
+                new Pengurus("Ni Made Radyaning Satya Diandra", "PSDM"),
+                new Pengurus("Azra Alifia Atsiilah", "PSDM"),
+                new Pengurus("Bunda Asmara", "PSDM"),
+                new Pengurus("Waren Geraldi", "PSDM"),
+                new Pengurus("Muhammad Kevin Alwafi", "PSDM"),
+                new Pengurus("Nadhira Paramarta", "PSDM")
             ]
         ),              
+        new Divisi(
+            "Divisi Sosmas",
+            [
+                new Pengurus("Amrih Mundi Sholikhah", "Sosial"),
+                new Pengurus("Amalia Firdaus", "Sosial"),
+                new Pengurus("Tsalats Ghulam Khabbussila", "Sosial"),
+                new Pengurus("Fibriana Prashanti", "Sosial"),
+                new Pengurus("Fira Nursaifah Marsaoly", "Sosial"),
+                new Pengurus("Yulia Triana Putri S.", "Peng Des"),
+                new Pengurus("Deodatus Wicaksono Boro Balawala", "Peng Des"),
+                new Pengurus("Nur Aliya Zahra", "Peng Des"),
+                new Pengurus("Regina Anjhani", "Peng Des"),
+                new Pengurus("Firhriyah Karimah", "Peng Des"),
+                new Pengurus("Muhammad Fajri Herbayu", "Peng Des")
+            ]
+        ),
+        new Divisi(
+            "Divisi Humas",
+            [
+                new Pengurus("Raisa Fathira Muatsar", "Eksternal"),
+                new Pengurus("Amelia Hannan Khoirunnisa", "Eksternal"),
+                new Pengurus("Prisnu Fachrial Irsyad", "Eksternal"),
+                new Pengurus("Jihan Zharifah", "Eksternal"),
+                new Pengurus("Azni Nuria Sabila", "Eksternal"),
+                new Pengurus("Asri Dian Pasca Beral", "Eksternal"),
+                new Pengurus("Safira Prameswari", "Eksternal"),
+                new Pengurus("Vito Darian Putra Purnama", "Advokasi"),
+                new Pengurus("Eiben Heizier", "Advokasi"),
+                new Pengurus("Sonya Rizki Rahmadani", "Advokasi"),
+                new Pengurus("Ondo Gogo Alorba Sirait", "Advokasi"),
+                new Pengurus("Mutiara Amalia Djardy", "Advokasi")
+            ]
+        ),              
+        new Divisi(
+            "Divisi PPM",
+            [
+                new Pengurus("Taufik Mehindra", "Olahraga"),
+                new Pengurus("Ignatius Dimas Frans", "Olahraga"),
+                new Pengurus("Bravenda Okta", "Olahraga"),
+                new Pengurus("Daffa Lesmana", "Olahraga"),
+                new Pengurus("Rendra Surya Kusuma", "Olahraga"),
+                new Pengurus("Muhammad Raihan Aqso", "Olahraga"),
+                new Pengurus("Nadya Abigail", "Seni"),
+                new Pengurus("I Gede Girindra", "Seni"),
+                new Pengurus("Sandra Asia Herbangun", "Seni"),
+                new Pengurus("Yusita Shafahayu Mayrizka", "Seni"),
+                new Pengurus("Devara Dyah", "Seni"),
+                new Pengurus("Syafa Tasya", "Seni")
+            ]
+        ),
         new Divisi(
             "Divisi Keilmuan",
             [
-            new Pengurus("Keilmuan1", "Riset"),
-            new Pengurus("Keilmuan2", "Riset"),
-            new Pengurus("Keilmuan3", "Kastrat"),
-            new Pengurus("Keilmuan4", "Kastrat")
+                new Pengurus("Fatimah Nur Hasanah", "Kastrat"),
+                new Pengurus("Salsabila Zeta Zain", "Kastrat"),
+                new Pengurus("Achmad Hanif Imaduddin", "Kastrat"),
+                new Pengurus("Edhita Berlianditta Putri Yudyastawa", "Kastrat"),
+                new Pengurus("Salsabila Nur Aini", "Riset"),
+                new Pengurus("Muhammad Rizal Effendi", "Riset"),
+                new Pengurus("Hafshah Luthfiah Hasna ", "Riset"),
+                new Pengurus("Alifian Arrazi ", "PW"),
+                new Pengurus("Made Naraya Laksmayuda Sumaniaka", "PW"),
+                new Pengurus("Qoryroh", "PW")
             ]
-        ),              
+        ), 
         new Divisi(
             "Divisi Kawirus",
             [
-            new Pengurus("Kawirus1", "Dana Usaha"),
-            new Pengurus("Kawirus2", "Pengembangan"),
-            new Pengurus("Kawirus3", "Pengembangan")
+                new Pengurus("Alifia Meita S", "Pengembangan"),
+                new Pengurus("Tarissa Rizki Ananda", "Pengembangan"),
+                new Pengurus("Bintang Bayu Kresna Putra", "Pengembangan"),
+                new Pengurus("Laura Astri Diva", "Pengembangan"),
+                new Pengurus("Nurul Fatimah Kusgiyarto", "Dana Usaha"),
+                new Pengurus("Adinda Safiratul Afifah", "Dana Usaha"),
+                new Pengurus("Nuryana Lestari", "Dana Usaha"),
+                new Pengurus("Restiara azhari", "Dana Usaha")
             ]
-        )              
+        ),
+        new Divisi(
+            "Divisi MIT",
+            [
+                new Pengurus("Adna Tabriza Zahratama", "Kreatif"),
+                new Pengurus("Nuraini Indra Putri Nugraheni", "Kreatif"),
+                new Pengurus("Sanda Rieke Kuntadi", "Desain"),
+                new Pengurus("Khansa Maritza Arumdapta", "Desain"),
+                new Pengurus("Arif Muhammad Rifqi Umar", "Desain"),
+                new Pengurus("Kinen Milang Pramudita", "Media"),
+                new Pengurus("Fadhil Anugrah Darwan", "IT")
+            ]
+        )
         ]
             
 
@@ -390,6 +469,7 @@ app.get("/hasil", function(req, res){
 
         if(distance <= 0){
             res.render("hasil", {title:"Hasil Seleksi", hasilSeleksi})
+            console.log(distance)
         } else{
             res.render("countdown", {title: "Hasil Seleksi", changePageDate: date, pageTitle })
         }
