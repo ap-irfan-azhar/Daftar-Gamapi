@@ -380,6 +380,7 @@ app.get("/Pengumuman", function(req, res){
                 new Pengurus("Tsalats Ghulam Khabbussila", "Sosial"),
                 new Pengurus("Fibriana Prashanti", "Sosial"),
                 new Pengurus("Fira Nursaifah Marsaoly", "Sosial"),
+                new Pengurus("Aileen Fedora Pakasi", "Sosial"),
                 new Pengurus("Yulia Triana Putri S.", "Peng Des"),
                 new Pengurus("Deodatus Wicaksono Boro Balawala", "Peng Des"),
                 new Pengurus("Nur Aliya Zahra", "Peng Des"),
